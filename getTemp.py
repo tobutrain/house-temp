@@ -24,7 +24,7 @@ def get_retry(url, retry_times, errs):
         r = requests.get(url)
         if t < retry_times:
             if r.status_code in errs:
-                time.sleep(2)
+                time.sleep(5)
                 continue
         return r
 
@@ -58,14 +58,14 @@ hi_lst=[h1,h2,h3,h4,h5,h6,h7,h8]
 lo_lst=[l1,l2,l3,l4,l5,l6,l7,l8]
 
 #Ambientから，センサ測定気温を取得
-arr_1=json.loads(get_retry(url_1,5,[500, 502, 503]).text)[0]
-arr_2=json.loads(get_retry(url_2,5,[500, 502, 503]).text)[0]
-arr_3=json.loads(get_retry(url_3,5,[500, 502, 503]).text)[0]
-arr_4=json.loads(get_retry(url_4,5,[500, 502, 503]).text)[0]
-arr_5=json.loads(get_retry(url_5,5,[500, 502, 503]).text)[0]
-arr_6=json.loads(get_retry(url_6,5,[500, 502, 503]).text)[0]
-arr_7=json.loads(get_retry(url_7,5,[500, 502, 503]).text)[0]
-arr_8=json.loads(get_retry(url_8,5,[500, 502, 503]).text)[0]
+arr_1=json.loads(get_retry(url_1,6,[500, 502, 503]).text)[0]
+arr_2=json.loads(get_retry(url_2,6,[500, 502, 503]).text)[0]
+arr_3=json.loads(get_retry(url_3,6,[500, 502, 503]).text)[0]
+arr_4=json.loads(get_retry(url_4,6,[500, 502, 503]).text)[0]
+arr_5=json.loads(get_retry(url_5,6,[500, 502, 503]).text)[0]
+arr_6=json.loads(get_retry(url_6,6,[500, 502, 503]).text)[0]
+arr_7=json.loads(get_retry(url_7,6,[500, 502, 503]).text)[0]
+arr_8=json.loads(get_retry(url_8,6,[500, 502, 503]).text)[0]
 
 temp_1=str(arr_1['d1'])
 temp_2=str(arr_2['d1'])
