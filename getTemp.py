@@ -121,7 +121,7 @@ tx.close()
 sbt = open(file_subhtml,'w',encoding='utf-8')
 
 sbt.write('<style> th{ font-size:40px;} td{font-size:45px; font-family:sans-serif;} p{font-size:30px;}</style>')
-sbt.write("<table border='1'><tr><th width='120'>No.</th><th width='120'>最高</th><th width='120'>最低</th><th width='420'>最終取得</th></tr>")
+sbt.write("<table border='1'><tr><th width='120'>No.</th><th width='120'>最高</th><th width='120'>最低</th><th width='450'>最終取得</th></tr>")
 sbt.write("<tr><td>No.1</td><td>"+h1+"</td><td>"+l1+"</td><td>"+time_1+"</td></tr>")
 sbt.write("<tr><td>No.2</td><td>"+h2+"</td><td>"+l2+"</td><td>"+time_2+"</td></tr>")
 sbt.write("<tr><td>No.3</td><td>"+h3+"</td><td>"+l3+"</td><td>"+time_3+"</td></tr>")
