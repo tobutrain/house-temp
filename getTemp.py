@@ -152,9 +152,9 @@ def send_line_notify(notification_message):
     requests.post(line_notify_api, headers = headers, data = data)
 
 
-temp_max = max(temp_lst)
-idx = temp_lst.index(temp_max)
-notify_temp = 20
+temp_max = float(max(temp_lst))
+idx = int(temp_lst.index(temp_max))
+notify_temp = float(20)
 if temp_max>=notify_temp:
     send_line_notify("センサNo."+idx+"の温度が上昇しています！ 温度:"+temp_max+"℃")
 
