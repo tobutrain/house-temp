@@ -154,7 +154,7 @@ def send_line_notify(notification_message):
 
 temp_max = float(max(temp_lst))
 #idx = int(temp_lst.index(temp_max))
-notify_temp = float(20)
+notify_temp = float(35)
 if temp_max>=notify_temp:
     send_line_notify("温度が上昇しています！ 温度:"+str(temp_max)+"℃")
 
