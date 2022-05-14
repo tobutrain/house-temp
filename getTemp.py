@@ -156,6 +156,6 @@ temp_max = float(max(temp_lst))
 #idx = int(temp_lst.index(temp_max))
 notify_temp = float(20)
 if temp_max>=notify_temp:
-    send_line_notify("温度が上昇しています！ 温度:"+temp_max+"℃")
+    send_line_notify("温度が上昇しています！ 温度:"+str(temp_max)+"℃")
 
 print("Success. Date:"+getdate)
