@@ -142,4 +142,20 @@ for num_wr in range(0,8):
 
 wcsv.close()
 
+#高温時,LINEに通知する
+
+def send_line_notify(notification_message):
+    line_notify_token = 'UmQClQJvwC2MTnP3pTdl0iX3nL8Esi2XWURU7MI6lnb'
+    line_notify_api = 'https://notify-api.line.me/api/notify'
+    headers = {'Authorization': f'Bearer {line_notify_token}'}
+    data = {'message': f'message: {notification_message}'}
+    requests.post(line_notify_api, headers = headers, data = data)
+
+
+temp_max = max(temp_lst)
+idx = temp_lst.index(temp_max)
+notify_temp = 20
+if temp_max>=notify_temp:
+    send_line_notify("センサNo."+idx+"の温度が上昇しています！ 温度:"+temp_max+"℃")
+
 print("Success. Date:"+getdate)
